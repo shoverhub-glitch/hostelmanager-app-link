@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Page Not Found | Hostel Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-50">
+    <main class="flex min-h-screen items-center justify-center px-6 py-16">
+        <div class="w-full max-w-2xl rounded-3xl border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur sm:p-10">
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">Hostel Manager</p>
+            <h1 class="mt-4 text-4xl font-extrabold tracking-tight">Page not found</h1>
+            <p id="status" class="mt-4 text-base leading-7 text-slate-300">
+                The page you requested could not be found.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a href="/" class="rounded-xl bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">Go to Home</a>
+                <a href="/delete-account/" class="rounded-xl border border-white/15 px-5 py-3 font-semibold text-white transition hover:bg-white/10">Delete Account</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            var normalizedPath = window.location.pathname.replace(/\/+$/, '');
+
+            if (/\/delete-account(?:\.html)?$/.test(normalizedPath)) {
+                // Slashless /delete-account → canonical /delete-account/
+                window.location.replace('/delete-account/');
+            } else {
+                // Any other unknown URL → back to homepage
+                window.location.replace('/');
+            }
+        })();
+    </script>
+</body>
+</html>
