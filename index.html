@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hostel Manager - Simplify hostel and property management from your phone. Download now on Google Play Store.">
-    <meta name="keywords" content="hostel management, property management, tenant management, android app">
-    <title>Hostel Manager - Simplify Property Management</title>
+    <meta name="description" content="Delete your Hostel Manager account.">
+    <title>Delete Account | Hostel Manager</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +20,7 @@
                     },
                 }
             }
-        }
+        };
     </script>
 
     <style>
@@ -29,483 +28,83 @@
             font-family: 'Inter', sans-serif;
         }
 
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(79, 70, 229, 0.15), transparent 32%),
+                radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.14), transparent 28%),
+                linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
         }
 
-        .gradient-bg-alt {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        .hero-card {
+            background: rgba(255, 255, 255, 0.86);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
         }
 
-        .gradient-bg-blue {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .feature-card {
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .phone-mockup {
-            position: relative;
-            width: 280px;
-            height: 570px;
-            background: #1a1a1a;
-            border-radius: 40px;
-            padding: 12px;
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .phone-screen {
-            width: 100%;
-            height: 100%;
-            background: white;
-            border-radius: 32px;
-            overflow: hidden;
-        }
-
-        .phone-notch {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 140px;
-            height: 28px;
-            background: #1a1a1a;
-            border-radius: 0 0 20px 20px;
-            z-index: 10;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-
-        .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: white;
-            margin: 0 auto 20px;
-        }
-
-        .screenshot-frame {
-            width: 220px;
-            height: 450px;
-            background: #1a1a1a;
-            border-radius: 30px;
-            padding: 10px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        .screenshot-inner {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 24px;
-            overflow: hidden;
+        .accent-line {
+            background: linear-gradient(90deg, #4f46e5 0%, #0ea5e9 100%);
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="min-h-screen text-slate-900">
+    <main class="px-4 py-10 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl">
+            <a href="../" class="inline-flex items-center text-sm font-semibold text-slate-600 transition hover:text-slate-900">
+                <span aria-hidden="true" class="mr-2">&larr;</span>
+                Back to Home
+            </a>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="flex items-center space-x-2">
-                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 21V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v16l7-3 7 3z"/>
-                        </svg>
-                        <span class="text-xl font-bold text-gray-900">Hostel Manager</span>
-                    </div>
-                </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-700 hover:text-purple-600 transition">Features</a>
-                    <a href="#how-it-works" class="text-gray-700 hover:text-purple-600 transition">How It Works</a>
-                    <a href="#screenshots" class="text-gray-700 hover:text-purple-600 transition">Screenshots</a>
-                    <button onclick="downloadApp()" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">
-                        Download
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+            <section class="hero-card mt-6 overflow-hidden rounded-[32px] border border-white/70">
+                <div class="accent-line h-2 w-full"></div>
 
-    <!-- Hero Section -->
-    <section class="pt-24 pb-20 gradient-bg overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center justify-between">
-                <div class="flex-1 text-white mb-12 lg:mb-0 text-center lg:text-left">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Simplify Hostel & Property Management
-                    </h1>
-                    <p class="text-lg sm:text-xl mb-8 text-purple-100 max-w-2xl">
-                        Manage your hostel, tenants, rooms, and staff effortlessly from your Android device. Everything you need in one powerful app.
-                    </p>
-                    <button onclick="downloadApp()" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-flex items-center space-x-3 shadow-xl">
-                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                        </svg>
-                        <span>Download on Google Play</span>
-                    </button>
-                </div>
-
-                <div class="flex-1 flex justify-center lg:justify-end">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-blue-50">
-                            <div class="text-center p-8">
-                                <svg class="w-20 h-20 mx-auto mb-4 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 21V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v16l7-3 7 3z"/>
-                                </svg>
-                                <div class="space-y-3">
-                                    <div class="h-3 bg-purple-200 rounded w-32 mx-auto"></div>
-                                    <div class="h-3 bg-purple-200 rounded w-24 mx-auto"></div>
-                                    <div class="h-3 bg-purple-200 rounded w-28 mx-auto"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    Everything You Need to Manage Your Hostel
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Powerful features designed to make hostel and property management effortless
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Property Management</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Manage multiple properties, track occupancy, and monitor all your hostels from a single dashboard.
-                    </p>
-                </div>
-
-                <!-- Feature 2 -->
-                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Tenant Management</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Keep detailed tenant records, track payments, and manage lease agreements with ease.
-                    </p>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM14 13a1 1 0 011-1h4a1 1 0 011 1v6a1 1 0 01-1 1h-4a1 1 0 01-1-1v-6z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Room Management</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Organize rooms, assign tenants, and track availability in real-time with an intuitive interface.
-                    </p>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Staff Management</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Coordinate your team, assign roles, and track staff performance efficiently.
-                    </p>
-                </div>
-
-                <!-- Feature 5 -->
-                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Subscription Plans</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Flexible pricing plans that scale with your business needs and property portfolio.
-                    </p>
-                </div>
-
-                <!-- Feature 6 -->
-                <div class="feature-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
-                        <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Reports & Analytics</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Get insights with detailed reports, occupancy analytics, and revenue tracking.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    Get Started in 3 Simple Steps
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Start managing your hostel smarter in minutes
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Step 1 -->
-                <div class="text-center">
-                    <div class="step-number">1</div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Download the App</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Install Hostel Manager from the Google Play Store on your Android device.
+                <div class="grid gap-10 px-6 py-10 sm:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:px-12 lg:py-14">
+                    <div>
+                        <p class="text-sm font-semibold uppercase tracking-[0.28em] text-indigo-600">Hostel Manager</p>
+                        <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">
+                            Delete Account
+                        </h1>
+                        <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                            Hostel Manager allows users to request deletion of their account and associated data through a verified email request process.
                         </p>
-                    </div>
-                </div>
 
-                <!-- Step 2 -->
-                <div class="text-center">
-                    <div class="step-number">2</div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-                            </svg>
+                        <div class="mt-8 rounded-3xl bg-slate-950 px-6 py-6 text-slate-50">
+                            <h2 class="text-lg font-bold">How to request account deletion</h2>
+                            <ol class="mt-4 space-y-3 text-sm leading-7 text-slate-300">
+                                <li>1. Send an email request to <a href="mailto:contact@shoverhub.com" class="font-semibold text-white underline decoration-white/40 underline-offset-4">contact@shoverhub.com</a>.</li>
+                                <li>2. Use the email address that is registered with your Hostel Manager account.</li>
+                                <li>3. In the email subject, write: <span class="font-semibold text-white">Delete my Hostel Manager account</span>.</li>
+                            </ol>
+                            <p class="mt-4 text-sm leading-7 text-slate-300">
+                                Once we receive your request, we will verify the account and permanently delete your account and associated data from our systems.
+                            </p>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Add Your Property</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Set up your hostel or property details with a quick and easy onboarding process.
-                        </p>
                     </div>
-                </div>
 
-                <!-- Step 3 -->
-                <div class="text-center">
-                    <div class="step-number">3</div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg">
-                        <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
+                    <div class="rounded-[28px] bg-white p-6 shadow-xl ring-1 ring-slate-200 sm:p-8">
+                        <h2 class="text-xl font-bold text-slate-950">Deletion details</h2>
+                        <div class="mt-6 space-y-4 text-sm leading-7 text-slate-600">
+                            <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
+                                <p class="font-semibold text-slate-900">What data will be deleted</p>
+                                <ul class="mt-3 space-y-2">
+                                    <li>- User account information</li>
+                                    <li>- Login credentials</li>
+                                    <li>- Tenant management data associated with the account</li>
+                                    <li>- Payment records stored in the application</li>
+                                </ul>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
+                                <p class="font-semibold text-slate-900">Data retention</p>
+                                <p class="mt-2">Some minimal data may be retained temporarily for legal, fraud prevention, or financial record-keeping purposes where required by applicable laws. All other personal data will be deleted from our systems within 7 days.</p>
+                            </div>
+                            <div class="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
+                                <p class="font-semibold text-slate-900">Questions</p>
+                                <p class="mt-2">If you have any questions about account deletion, please contact us at <a href="mailto:contact@shoverhub.com" class="font-semibold text-indigo-600 underline decoration-indigo-200 underline-offset-4">contact@shoverhub.com</a>.</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Start Managing</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            Add tenants, assign rooms, and manage your hostel operations effortlessly.
-                        </p>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    Beautiful & Intuitive Interface
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    A glimpse of what you'll experience
-                </p>
-            </div>
-
-            <div class="flex flex-wrap justify-center gap-8">
-                <!-- Screenshot 1 -->
-                <div class="screenshot-frame transform hover:scale-105 transition">
-                    <div class="screenshot-inner flex items-center justify-center">
-                        <div class="text-center p-6">
-                            <div class="w-16 h-16 bg-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M19 21V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v16l7-3 7 3z"/>
-                                </svg>
-                            </div>
-                            <div class="space-y-2">
-                                <div class="h-2 bg-gray-300 rounded w-32 mx-auto"></div>
-                                <div class="h-2 bg-gray-300 rounded w-24 mx-auto"></div>
-                                <div class="h-8 bg-purple-500 rounded-lg w-40 mx-auto mt-4"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Screenshot 2 -->
-                <div class="screenshot-frame transform hover:scale-105 transition">
-                    <div class="screenshot-inner flex items-center justify-center">
-                        <div class="w-full p-6 space-y-3">
-                            <div class="bg-white p-4 rounded-lg shadow">
-                                <div class="h-2 bg-blue-500 rounded w-24 mb-2"></div>
-                                <div class="h-2 bg-gray-300 rounded w-32"></div>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow">
-                                <div class="h-2 bg-green-500 rounded w-24 mb-2"></div>
-                                <div class="h-2 bg-gray-300 rounded w-32"></div>
-                            </div>
-                            <div class="bg-white p-4 rounded-lg shadow">
-                                <div class="h-2 bg-orange-500 rounded w-24 mb-2"></div>
-                                <div class="h-2 bg-gray-300 rounded w-32"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Screenshot 3 -->
-                <div class="screenshot-frame transform hover:scale-105 transition">
-                    <div class="screenshot-inner flex items-center justify-center">
-                        <div class="text-center p-6">
-                            <div class="grid grid-cols-2 gap-3">
-                                <div class="bg-white p-4 rounded-lg shadow">
-                                    <div class="w-8 h-8 bg-purple-500 rounded mx-auto mb-2"></div>
-                                    <div class="h-1 bg-gray-300 rounded w-12 mx-auto"></div>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
-                                    <div class="w-8 h-8 bg-blue-500 rounded mx-auto mb-2"></div>
-                                    <div class="h-1 bg-gray-300 rounded w-12 mx-auto"></div>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
-                                    <div class="w-8 h-8 bg-green-500 rounded mx-auto mb-2"></div>
-                                    <div class="h-1 bg-gray-300 rounded w-12 mx-auto"></div>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg shadow">
-                                    <div class="w-8 h-8 bg-orange-500 rounded mx-auto mb-2"></div>
-                                    <div class="h-1 bg-gray-300 rounded w-12 mx-auto"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="py-20 gradient-bg">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Hostel Management?
-            </h2>
-            <p class="text-xl text-purple-100 mb-10 max-w-2xl mx-auto">
-                Join hundreds of hostel managers who are already simplifying their operations with Hostel Manager.
-            </p>
-            <button onclick="downloadApp()" class="bg-white text-purple-600 px-10 py-5 rounded-lg font-semibold text-lg hover:bg-gray-100 transition inline-flex items-center space-x-3 shadow-2xl">
-                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                </svg>
-                <div class="text-left">
-                    <div class="text-xs text-purple-400">GET IT ON</div>
-                    <div class="text-lg font-bold">Google Play</div>
-                </div>
-            </button>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="flex items-center space-x-2 mb-3">
-                        <svg class="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 21V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v16l7-3 7 3z"/>
-                        </svg>
-                        <span class="text-xl font-bold">Hostel Manager</span>
-                    </div>
-                    <p class="text-gray-400">by ShoverHub</p>
-                </div>
-
-                <div class="text-center md:text-right">
-                    <p class="text-gray-400">
-                        &copy; 2026 ShoverHub. All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function downloadApp() {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-            const isAndroid = /android/i.test(userAgent);
-
-            if (isAndroid) {
-                window.location.href = 'market://details?id=com.shoverhub.hostelmanager';
-
-                setTimeout(() => {
-                    window.location.href = 'https://play.google.com/store/apps/details?id=com.shoverhub.hostelmanager';
-                }, 1500);
-            } else {
-                window.open('https://play.google.com/store/apps/details?id=com.shoverhub.hostelmanager', '_blank');
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('a[href^="#"]');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        const offsetTop = targetElement.offsetTop - 64;
-                        window.scrollTo({
-                            top: offsetTop,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-
+    </main>
 </body>
 </html>
