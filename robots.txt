@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hostemanager.shoverhub.com/sitemap.xml
